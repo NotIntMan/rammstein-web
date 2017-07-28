@@ -1,0 +1,13 @@
+include includes/head.pug
+include includes/footer.pug
+include includes/menu.pug
+
+doctype html
+html
+	+head('Rammstein')
+	body
+		+add-footer
+			.outer-container
+				.main-logo
+				.main-menu
+					+menu('home')

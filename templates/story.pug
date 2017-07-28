@@ -1,0 +1,12 @@
+include includes/head.pug
+include includes/footer.pug
+include includes/top-menu.pug
+
+doctype html
+html
+	+head('Rammstein')
+	body
+		+add-footer
+			+top-menu
+			.outer-container
+				.article!= article

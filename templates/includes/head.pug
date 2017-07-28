@@ -1,0 +1,10 @@
+mixin head(title)
+	head
+		link(
+			rel='stylesheet'
+			href='https://fonts.googleapis.com/css?family=Istok+Web&amp;subset=cyrillic,cyrillic-ext,latin-ext'
+		)
+		link(rel='stylesheet', href='/static/style.css')
+		title= title
+		if block
+			block

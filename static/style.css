@@ -1,0 +1,174 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family: 'Istok Web', sans-serif;
+	background-color: #000;
+	background-image: url(/static/background.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding: 0;
+}
+
+.outer-container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.main-logo {
+	width: 900px;
+	height: 246px;
+	background-image: url(/static/main-logo.png);
+	background-size: cover;
+}
+
+.main-menu {
+	background-image: linear-gradient(270deg, rgba(0,0,0,0) 0, #FFF 50%, rgba(0,0,0,0) 100%);
+	height: 45px;
+	font-size: 20pt;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.main-menu > label {
+	margin: 0 10px;
+}
+
+.main-menu > a {
+	color: black;
+	text-decoration: none;
+}
+
+.whitespace-150 {
+	height: 150px;
+}
+
+.page-container {
+	min-height: 100%;
+	margin-bottom: -110px;
+}
+
+.page-container:after {
+	content: "";
+  display: block;
+	height: 110px;
+}
+
+.footer {
+	height: 102px;
+	padding: 5px;
+	border-top: #333 solid 3px;
+	background: #000;
+	color: white;
+	font-size: 8pt;
+}
+
+.footer p {
+	margin: 0;
+}
+
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.footer .column {
+	vertical-align: top;
+	height: 100%;
+}
+
+.column-2 {
+	width: 100px;
+}
+
+.column-3 {
+	width: 150px;
+}
+
+.column-4 {
+	width: 200px;
+}
+
+.top-menu-container {
+	padding-top: 5px;
+}
+
+.top-menu {
+	font-size: 20pt;
+	text-align: left;
+	padding-top: 5px;
+	color: white;
+	border-top: #FFF solid 3px;
+	height: 100px;
+	background-image: linear-gradient(180deg, #000 0, #000 25%, rgba(0,0,0,0) 100%);
+}
+
+.top-menu .top-menu-items {
+	margin-left: 25px;
+	width: 675px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 20pt;
+	text-align: center;
+}
+
+.top-menu a {
+	color: white;
+	text-decoration: none;
+}
+
+.top-menu label {
+	margin: 0 10px;
+}
+
+.mini-logo {
+	width: 200px;
+	height: 54px;
+	background-image: url(/static/mini-logo.png);
+	background-size: cover;
+	display: inline-block;
+}
+
+.bio-poster {
+	background: #000;
+	text-decoration: none;
+}
+
+.bio-poster > .bio-photo {
+	width: 150px;
+	height: 300px;
+	background-size: cover;
+}
+
+.bio-poster > .bio-name {
+	height: 46px;
+	font-size: 8pt;
+	text-align: center;
+	color: white;
+	padding-top: 10px;
+}
+
+.bio-poster > .bio-name span {
+	display: block;
+	vertical-align: middle;
+}
+
+.article {
+	background: linear-gradient(
+		0deg,
+		rgba(0,0,0,0) 0%,
+		rgba(0,0,0,0.35) 15%,
+		rgba(0,0,0,0.5) 50%,
+		rgba(0,0,0,0.35) 85%,
+		rgba(0,0,0,0) 100%
+	);
+	xbackground: rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px 50px;
+	font-size: 10pt;
+	text-align: justify;
+	margin-bottom: 25px;
+}
+

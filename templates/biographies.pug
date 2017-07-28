@@ -1,0 +1,35 @@
+include includes/head.pug
+include includes/footer.pug
+include includes/top-menu.pug
+
+mixin bio-banner(imgSrc, url)
+	a.column.column-3.bio-poster(href=url)
+		.bio-photo(style=`background-image: url(${imgSrc})`)
+		.bio-name
+			block
+
+doctype html
+html
+	+head('Rammstein - биографии участников')
+	body
+		+add-footer
+			+top-menu('bio')
+			.outer-container
+				+bio-banner('/static/photo-till.jpg', '#')
+					span Тилль Линдеманн
+					span (Till Lindemann)
+				+bio-banner('/static/photo-kruspe.jpg', '#')
+					span Рихард Круспе-Бернштайн
+					span (Richard Z. Kruspe-Bernstein)
+				+bio-banner('/static/photo-landers.jpg', '#')
+					span Пауль Ландерс
+					span (Paul Landers)
+				+bio-banner('/static/photo-riedel.jpg', '#')
+					span Оливер Риедель
+					span (Oliver "Lars" Riedel)
+				+bio-banner('/static/photo-lorenz.jpg', '#')
+					span Христиан Лоренц
+					span (Christian "Flake" Lorenz)
+				+bio-banner('/static/photo-schneider.jpg', '#')
+					span Христоф Шнайдер
+					span (Christoph "Doom" Schneider)

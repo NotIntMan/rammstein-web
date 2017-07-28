@@ -1,0 +1,23 @@
+{
+  "name": "rammstein-web",
+  "version": "0.1.0",
+  "description": "Student project dedicated to the cult rock band",
+  "main": "build.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NIM-Pro/rammstein-web.git"
+  },
+  "author": "Dmitry Demin (https://nim-pro.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NIM-Pro/rammstein-web/issues"
+  },
+  "homepage": "https://github.com/NIM-Pro/rammstein-web#readme",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "pretty": "^2.0.0",
+    "pug": "^2.0.0-rc.2",
+    "symlink-dir": "^1.1.0"
+  }
+}

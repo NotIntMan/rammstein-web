@@ -1,0 +1,33 @@
+{
+	"prettyHTML": false,
+	"globalParameters": {
+		"authors": {
+			"type": "pug-template",
+			"template": "articles/authors.pug"
+		},
+		"technologies": {
+			"type": "pug-template",
+			"template": "articles/technologies.pug"
+		}
+	},
+	"pages": {
+		"index.html": {
+			"type": "pug-template",
+			"template": "templates/index.pug"
+		},
+		"biographies.html": {
+			"type": "pug-template",
+			"template": "templates/biographies.pug"
+		},
+		"story.html": {
+			"type": "pug-template",
+			"template": "templates/story.pug",
+			"parameters": {
+				"article": {
+					"type": "pug-template",
+					"template": "articles/test.pug"
+				}
+			}
+		}
+	}
+}

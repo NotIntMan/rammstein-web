@@ -1,0 +1,10 @@
+mixin add-footer
+	.page-container
+		if block
+			block
+	.footer
+		.outer-container
+			.column.column-4
+			.column.column-4!= global.authors
+			.column.column-2
+			.column.column-4!= global.technologies
