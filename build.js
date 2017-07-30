@@ -18,6 +18,7 @@ const Pug = require('pug')
 const Pretty = require('pretty')
 const SymLinkDir = require('symlink-dir')
 const MKDirP = require('mkdirp')
+const Yaml = require('yaml-js')
 
 function readFile(filename) {
 	return new Promise((resolve, reject) => {
@@ -111,7 +112,7 @@ class ConfigReader {
 	read(filename) {
 		return readFile(filename)
 			.then(buf => {
-				const config = JSON.parse(buf.toString())
+				const config = Yaml.load(buf.toString())
 				return this.process(config, [], config, filename)
 			})
 	}
@@ -156,7 +157,7 @@ const reader = new ConfigReader
 reader.registerType('pug-template', PugTemplateType)
 
 async function main() {
-	const configPromise = reader.read('config.json')
+	const configPromise = reader.read('config.yaml')
 	const config = await configPromise
 	const queue = []
 	for (const url of Object.keys(config.pages))
