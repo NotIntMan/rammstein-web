@@ -1,0 +1,15 @@
+mixin youtube(id)
+	iframe.youtube(
+		src=`https://www.youtube.com/embed/${id}?ecver=2`,
+		width='384',
+		height='216',
+		frameborder='0',
+		allowfullscreen
+	)
+
+h1 Концерты
+.no-ident
+	+youtube('8EE9pbwbwFE')
+	+youtube('943qYfNzQ44')
+	+youtube('hEHGKGWbpOA')
+	+youtube('SYzxWE59oyY')

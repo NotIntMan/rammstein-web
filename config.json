@@ -8,7 +8,14 @@
 		"technologies": {
 			"type": "pug-template",
 			"template": "articles/technologies.pug"
-		}
+		},
+		"menuItems": [
+			{"id": "home", "url": "/", "desc": "На главную"},
+			{"id": "story", "url": "/story.html", "desc": "История группы"},
+			{"id": "bio", "url": "/biographies.html", "desc": "Биографии участников"},
+			{"id": "albums", "url": "/albums.html", "desc": "Альбомы"},
+			{"id": "concerts", "url": "/concerts.html", "desc": "Концерты"}
+		]
 	},
 	"pages": {
 		"index.html": {
@@ -17,15 +24,147 @@
 		},
 		"biographies.html": {
 			"type": "pug-template",
-			"template": "templates/biographies.pug"
+			"template": "templates/biographies.pug",
+			"parameters": {
+				"members": [
+					{
+						"photo": "/static/photo-till.jpg",
+						"url": "/bios/till.html",
+						"name": ["Тилль Линдеманн", "(Till Lindemann)"]
+					},
+					{
+						"photo": "/static/photo-kruspe.jpg",
+						"url": "/bios/kruspe.html",
+						"name": ["Рихард Круспе-Бернштайн", "(Richard Z. Kruspe-Bernstein)"]
+					},
+					{
+						"photo": "/static/photo-landers.jpg",
+						"url": "/bios/landers.html",
+						"name": ["Пауль Ландерс", "(Paul Landers)"]
+					},
+					{
+						"photo": "/static/photo-riedel.jpg",
+						"url": "/bios/riedel.html",
+						"name": ["Оливер Риедель", "(Oliver \"Lars\" Riedel)"]
+					},
+					{
+						"photo": "/static/photo-lorenz.jpg",
+						"url": "/bios/lorenz.html",
+						"name": ["Христиан Лоренц", "(Christian \"Flake\" Lorenz)"]
+					},
+					{
+						"photo": "/static/photo-schneider.jpg",
+						"url": "/bios/schneider.html",
+						"name": ["Христоф Шнайдер", "(Christoph \"Doom\" Schneider)"]
+					}
+				]
+			}
 		},
 		"story.html": {
 			"type": "pug-template",
-			"template": "templates/story.pug",
+			"template": "templates/article.pug",
 			"parameters": {
+				"title": "Rammstein - История группы",
+				"menuTarget": "story",
 				"article": {
 					"type": "pug-template",
-					"template": "articles/test.pug"
+					"template": "articles/story.pug"
+				}
+			}
+		},
+		"albums.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Альбомы",
+				"menuTarget": "albums",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/albums.pug"
+				}
+			}
+		},
+		"concerts.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Концерты",
+				"menuTarget": "concerts",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/concerts.pug"
+				}
+			}
+		},
+		"bios/till.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Биографии - Till Lindemann",
+				"menuTarget": "",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/bios/till.pug"
+				}
+			}
+		},
+		"bios/kruspe.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Биографии - Рихард Круспе-Бернштайн",
+				"menuTarget": "",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/bios/kruspe.pug"
+				}
+			}
+		},
+		"bios/landers.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Биографии - Пауль Ландерс",
+				"menuTarget": "",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/bios/landers.pug"
+				}
+			}
+		},
+		"bios/riedel.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Биографии - Оливер Риедель",
+				"menuTarget": "",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/bios/riedel.pug"
+				}
+			}
+		},
+		"bios/lorenz.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Биографии - Христиан Лоренц",
+				"menuTarget": "",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/bios/lorenz.pug"
+				}
+			}
+		},
+		"bios/schneider.html": {
+			"type": "pug-template",
+			"template": "templates/article.pug",
+			"parameters": {
+				"title": "Rammstein - Биографии - Христоф Шнайдер",
+				"menuTarget": "",
+				"article": {
+					"type": "pug-template",
+					"template": "articles/bios/schneider.pug"
 				}
 			}
 		}

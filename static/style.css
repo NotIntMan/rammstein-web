@@ -12,6 +12,12 @@ body {
 	padding: 0;
 }
 
+.big-outer-container {
+	min-width: 900px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .outer-container {
 	width: 900px;
 	margin: 0 auto;
@@ -107,11 +113,12 @@ body {
 
 .top-menu .top-menu-items {
 	margin-left: 25px;
-	width: 675px;
+	min-width: 675px;
+	max-width: 975px;
 	display: inline-block;
 	vertical-align: top;
 	font-size: 20pt;
-	text-align: center;
+	text-align: left;
 }
 
 .top-menu a {
@@ -157,18 +164,33 @@ body {
 
 .article {
 	background: linear-gradient(
-		0deg,
+		180deg,
 		rgba(0,0,0,0) 0%,
-		rgba(0,0,0,0.35) 15%,
-		rgba(0,0,0,0.5) 50%,
-		rgba(0,0,0,0.35) 85%,
+		#000 100px,
+		#000 50%,
+		#000 90%,
 		rgba(0,0,0,0) 100%
 	);
-	xbackground: rgba(0, 0, 0, 0.5);
-	color: white;
+	color: #DDD;
 	padding: 10px 50px;
 	font-size: 10pt;
 	text-align: justify;
 	margin-bottom: 25px;
+	text-indent: 25px;
 }
 
+.article a {
+	color: #FFF;
+}
+
+.no-ident {
+	text-indent: 0;
+}
+
+.youtube {
+	display: inline-block;
+	width: 384px;
+	height: 216px;
+	padding: 8px;
+	background: rgba(0, 0, 0, 0.5);
+}

@@ -1,9 +1,12 @@
 {
   "name": "rammstein-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Student project dedicated to the cult rock band",
   "main": "build.js",
-  "scripts": {},
+  "scripts": {
+    "build": "node build",
+    "host": "node build && cd build && http-server -p 80"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NIM-Pro/rammstein-web.git"
@@ -15,6 +18,7 @@
   },
   "homepage": "https://github.com/NIM-Pro/rammstein-web#readme",
   "dependencies": {
+    "http-server": "^0.10.0",
     "mkdirp": "^0.5.1",
     "pretty": "^2.0.0",
     "pug": "^2.0.0-rc.2",

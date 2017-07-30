@@ -30,13 +30,16 @@ function readFile(filename) {
 }
 
 function writeFile(filename, data) {
-	return new Promise((resolve, reject) => {
-		FSWriteFile(filename, data, err => {
-			if (err)
-				return reject(err)
-			resolve()
+	return MakeDir(PathResolve(filename, '..'))
+	.then(() =>
+		new Promise((resolve, reject) => {
+			FSWriteFile(filename, data, err => {
+				if (err)
+					return reject(err)
+				resolve()
+			})
 		})
-	})
+	)
 }
 
 function MakeDir(path) {
@@ -154,7 +157,6 @@ reader.registerType('pug-template', PugTemplateType)
 
 async function main() {
 	const configPromise = reader.read('config.json')
-	await MakeDir(PathResolve('.', 'build'))
 	const config = await configPromise
 	const queue = []
 	for (const url of Object.keys(config.pages))

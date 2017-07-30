@@ -15,21 +15,7 @@ html
 		+add-footer
 			+top-menu('bio')
 			.outer-container
-				+bio-banner('/static/photo-till.jpg', '#')
-					span Тилль Линдеманн
-					span (Till Lindemann)
-				+bio-banner('/static/photo-kruspe.jpg', '#')
-					span Рихард Круспе-Бернштайн
-					span (Richard Z. Kruspe-Bernstein)
-				+bio-banner('/static/photo-landers.jpg', '#')
-					span Пауль Ландерс
-					span (Paul Landers)
-				+bio-banner('/static/photo-riedel.jpg', '#')
-					span Оливер Риедель
-					span (Oliver "Lars" Riedel)
-				+bio-banner('/static/photo-lorenz.jpg', '#')
-					span Христиан Лоренц
-					span (Christian "Flake" Lorenz)
-				+bio-banner('/static/photo-schneider.jpg', '#')
-					span Христоф Шнайдер
-					span (Christoph "Doom" Schneider)
+				- for (const member of members)
+					+bio-banner(member.photo, member.url)
+						- for (const row of member.name)
+							span= row

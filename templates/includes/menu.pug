@@ -1,13 +1,5 @@
 mixin menu(to)
-	-
-		const items = [
-			{id: 'home', url: '/', desc: 'На главную'},
-			{id: 'story', url: '/story.html', desc: 'История группы'},
-			{id: 'bio', url: '/biographies.html', desc: 'Биографии участников'},
-			{id: 'albums', url: '/', desc: 'Альбомы'},
-			{id: 'concerts', url: '/', desc: 'Концерты'},
-		]
-		.filter(item => item.id != to)
+	- const items = global.menuItems.filter(item => item.id != to)
 	- for (let i = 0, l = items.length; i < l; i++)
 		- const item = items[i]
 		- if (i > 0)
